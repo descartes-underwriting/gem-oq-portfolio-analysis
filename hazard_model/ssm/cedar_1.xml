@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='utf-8'?>
+<nrml xmlns:gml="http://www.opengis.net/gml"
+      xmlns="http://openquake.org/xmlns/nrml/0.5">
+
+    <sourceModel name="South Africa Source Model">
+
+        <sourceGroup rup_interdep="indep" src_interdep="indep" srcs_weights="1.0" 
+                tectonicRegion="Stable Continental Crust">
+
+        <areaSource id="1" name="CEDAR_AZ" tectonicRegion="Stable Continental Crust">
+            <areaGeometry>
+                <gml:Polygon>
+                    <gml:exterior>
+                        <gml:LinearRing>
+                            <gml:posList>
+                             26.20100  -30.78000
+                             28.50000  -30.80100
+                             29.88900  -31.72600
+                             31.00100  -31.00000
+                             31.11400  -30.62100
+                             30.58236  -29.70389
+                             29.49200  -29.02900
+                             27.97100  -28.71500
+                             26.20000  -28.62200
+                            </gml:posList>
+                        </gml:LinearRing>
+                    </gml:exterior>
+                </gml:Polygon>
+                <upperSeismoDepth>0.5</upperSeismoDepth>
+                <lowerSeismoDepth>17.0</lowerSeismoDepth>
+            </areaGeometry>
+            <magScaleRel>WC1994</magScaleRel>
+            <ruptAspectRatio>1.0</ruptAspectRatio>
+            <truncGutenbergRichterMFD aValue="3.64" bValue="1.06" minMag="5.0" maxMag="5.85" />
+            <nodalPlaneDist>
+                <nodalPlane probability="1.0" strike="148.0" dip="42.0" rake="-78.0" />
+            </nodalPlaneDist>
+            <hypoDepthDist>
+                <hypoDepth probability="0.2" depth="5.0" />
+				<hypoDepth probability="0.6" depth="10.0" />
+				<hypoDepth probability="0.2" depth="15.0" />
+            </hypoDepthDist>
+        </areaSource>
+
+        </sourceGroup>
+    </sourceModel>
+</nrml>
