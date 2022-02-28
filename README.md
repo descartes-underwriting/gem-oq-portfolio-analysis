@@ -20,24 +20,24 @@ For that we prepared the following folders & files:
 
 ## Event-based runs with preset Ruptures
 
-To analyze the correlation of the 4 new locations onto the existing 2 locations,
+To analyze the correlation of the 4 new locations onto the existing 2 locations:
 
 ### Same rupture samples
 
-we want to re-use the same sampled ruptures of the `first_run`.
-Preferably we want to use the `calc_46.hdf5`
+We want to re-use the same sampled ruptures of the `first_run`.
+Preferably we want to use the `calc_46.hdf5` file.
 
 _How do we have to adjust the `job.ini` file to do so?_
 
 
 ### Same GMPE samples
 
-we want to re-use the same sampled GMPEs of the `first_run`s.
-Preferably we want to use the `calc_46.hdf5`
+We want to re-use the same sampled GMPEs of the `first_run`.
+Preferably we want to use the `calc_46.hdf5` file.
 
 We want to be able to do this in two ways:
-1. Keep the same GMPEs for the same realization, but vary the sampled $\sigma_i$ of the truncation level for each event.
-2. Keep the same GMPEs _and_ the same $\sigma_i$ of the truncation level for all the events. 
+1. Keep the same GMPEs for the same realization, but vary the sampled $$\sigma_i$$ of the truncation level for each event.
+2. Keep the same GMPEs _and_ the same $$\sigma_i$$ of the truncation level for all the events. 
 
 _How do we have to adjust the `job.ini` file to do so?_
 
