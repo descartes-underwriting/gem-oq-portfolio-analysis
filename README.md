@@ -3,9 +3,12 @@
 
 # Portfolio Accumulation
 
-We want to analyze the impact of new locations onto an existing portfolio.
-For that we prepared the following folders & files:
+## Goal
 
+We would like to analyze the impact of new locations onto an existing portfolio.
+
+## Use case
+For that we prepared the following folders & files:
 
 - `hazard_model`: contains the open-source `ZAF v2018` hazard model that is used in the following
 
@@ -18,29 +21,34 @@ For that we prepared the following folders & files:
   - `sites2.csv`: contains 4 new locations of which we want to know the correlation with our existing portfolio (= `sites1.csv`)
   - `AccumulationTest2.zip`: contains the run configuration (tbc) to analyze the impact onto our portfolio
 
-## Event-based runs with preset Ruptures
+## What we would like to achieve: Event-based PSHA analysis with the same assumptions
 
-To analyze the correlation of the 4 new locations onto the existing 2 locations:
+Our goal is to run an Event-based PSHA analysis for the second group of assets (i.e. `sites2.csv`) using the same assumptions used for the Event-based PSHA run with the first group of sites (i.e. `sites1.csv`)
+This would allow us to directly accounting for the correlation of new assets (in this example 4 locations) added to our preexisting portfolio (in this example 2 locations).
+
+More specifically, to achieve this goal we would like to use the same realizations for the two runs. Of course for each realizations we would like to use: 
+1. the same ruptures
+2. the same GMPE associated to each rupture
 
 ### Same rupture samples
 
-We want to re-use the same sampled ruptures of the `first_run`.
-Preferably we want to use the `calc_46.hdf5` file.
+For each realization, we would like the same sampled ruptures of the `first_run`.
+Preferably we would like to use the `calc_46.hdf5` file.
 
-_How do we have to adjust the `job.ini` file to do so?_
+_How do we have to adjust the `job.ini` file in `AccumulationTest2.zip` to do so?_
+_Do we have to define other input files to do so?_
 
 
 ### Same GMPE samples
 
-We want to re-use the same sampled GMPEs of the `first_run`.
-Preferably we want to use the `calc_46.hdf5` file.
+For each rupture of the previous point, we would like to re-use the same sampled GMPEs of the `first_run`.
+Preferably we would like to use the `calc_46.hdf5` file.
 
-We want to be able to do this in two ways:
-1. Keep the same GMPEs for the same realization, but vary the sampled $$\sigma_i$$ of the truncation level for each event.
-2. Keep the same GMPEs _and_ the same $$\sigma_i$$ of the truncation level for all the events. 
+If possible, we would like to be able to do this in two ways:
+1. Without any groundmotion spatial correlation model
+2. With a groundmotion spatial correlation model. This, we guess, requires to save besides the GMPE also the information of the sampled sigma of the first run (This second option is definitively not high priority)
 
-_How do we have to adjust the `job.ini` file to do so?_
-
+_How do we have to adjust the `job.ini` file in `AccumulationTest2.zip` to do so?_
 
 
 # V3.13-Problems 
