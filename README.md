@@ -21,15 +21,14 @@ We prepared the following folders & files:
 
 ## Wanted-Outcome Description
 
-### Event-based runs with preset Ruptures
+### 1. Event-based runs with preset Ruptures
 
 Our goal is to run an Event-based PSHA analysis for the second group of assets (i.e. sites2.csv) under the same assumptions as for the first group of assets (i.e. sites1.csv).
 
-Preferably, based on the sampled ruptures of `firs_run`, only the ground motion fields at the set of `sites2.csv` is calculated.
+More specifically, we would like to use for the `second_run`, the same sampled ruptures of the `first_run`.
+_How do we have to adjust the `job.ini` file and the input files in `AccumulationTest2.zip` to do so?_
 
-To analyze the correlation of the 4 new locations onto the existing 2 locations:
-
-#### 1.  Variable truncation samples
+### 2.  Event-based runs with the same GMPE associated to each Rupture
 
 ```bash
 How to give the same list of rupture to the assets
@@ -38,8 +37,16 @@ How to give the same list of rupture to the assets
 * @bernie : have an example ?
 * @fred : find the middle ground in the text
 ```
+Once able to use the same samples of ruptures of the `first_run` for the `second_run` as described above, we would like to use for each sampled rupture the same GMPE used in the `first_run` also for the `second_run`.
 
-We want to re-use the same sampled ruptures and the same GPMEs of the `first_run`.
+_How do we have to adjust the `job.ini` file and the input files in `AccumulationTest2.zip` to do so?_
+
+In other words, for the two runs (i.e. `first_run` and `second_run`) we would like to use the same realizations. 
+
+# Maria's comment: I would stop here because to me it is not meaningful  define `variable and fixed std`. Indeed the sampled std it is something that is defined at site level, which changes site but site. I think it does not really make sense saying that we want to use the same sampled/fixed std for different sites. 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+<!-- We want to re-use the same sampled ruptures and the same GPMEs of the `first_run`.
 Preferably we want to use the `calc_46.hdf5` file.
 
 Fixed Variables:
@@ -71,4 +78,4 @@ Flexible Variables:
 
 - None
 
-_How do we have to adjust the `job.ini` file in `AccumulationTest2.zip`  to do so?_
+_How do we have to adjust the `job.ini` file in `AccumulationTest2.zip`  to do so?_ -->
