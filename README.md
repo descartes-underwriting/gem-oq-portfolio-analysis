@@ -26,6 +26,7 @@ We prepared the following folders & files:
 Our goal is to run an Event-based PSHA analysis for the second group of assets (i.e. sites2.csv) under the same assumptions as for the first group of assets (i.e. sites1.csv).
 
 More specifically, we would like to use for the `second_run`, the same sampled ruptures of the `first_run`.
+
 _How do we have to adjust the `job.ini` file and the input files in `AccumulationTest2.zip` to do so?_
 
 ### 2.  Event-based runs with the same GMPE associated to each Rupture
