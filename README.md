@@ -43,7 +43,7 @@ _How do we have to adjust the `job.ini` file and the input files in `Accumulatio
 
 In other words, for the two runs (i.e. `first_run` and `second_run`) we would like to use the same realizations. 
 
-# Maria's comment: I would stop here because to me it is not meaningful  define `variable and fixed std`. Indeed the sampled std it is something that is defined at site level, which changes site but site. I think it does not really make sense saying that we want to use the same sampled/fixed std for different sites. 
+##### Maria's comment: I would stop here because to me it is not meaningful  define `variable and fixed std`. Indeed the sampled std it is something that is defined at site level, which changes site but site. I think it does not really make sense saying that we want to use the same sampled/fixed std for different sites. 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 <!-- We want to re-use the same sampled ruptures and the same GPMEs of the `first_run`.
