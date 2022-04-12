@@ -31,20 +31,12 @@ _How do we have to adjust the `job.ini` file and the input files in `Accumulatio
 
 ### 2.  Event-based runs with the same GMPE associated to each Rupture
 
-```bash
-How to give the same list of rupture to the assets
-
-* @maria : reword the paragraph
-* @bernie : have an example ?
-* @fred : find the middle ground in the text
-```
 Once able to use the same samples of ruptures of the `first_run` for the `second_run` as described above, we would like to use for each sampled rupture the same GMPE used in the `first_run` also for the `second_run`.
 
 _How do we have to adjust the `job.ini` file and the input files in `AccumulationTest2.zip` to do so?_
 
 In other words, for the two runs (i.e. `first_run` and `second_run`) we would like to use the same realizations. 
 
-##### Maria's comment: I would stop here because to me it is not meaningful  define `variable and fixed std`. Indeed the sampled std it is something that is defined at site level, which changes site but site. I think it does not really make sense saying that we want to use the same sampled/fixed std for different sites. 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 <!-- We want to re-use the same sampled ruptures and the same GPMEs of the `first_run`.
