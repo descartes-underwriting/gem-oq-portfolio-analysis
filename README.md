@@ -31,7 +31,7 @@ _How do we have to adjust the `job.ini` file and the input files in `Accumulatio
 
 ### 2.  Event-based runs with the same GMPE associated to each Rupture
 
-Once able to use the same samples of ruptures of the `current_portfolio_run` for the `additional_deal_run` as described above, we would like to use for each sampled rupture the same GMPE used in the `first_run` also for the `second_run`.
+Once able to use the same samples of ruptures of the `current_portfolio_run` for the `additional_deal_run` as described above, we would like to use for each sampled rupture the same GMPE used in the `current_portfolio_run` also for the `additional_deal_run`.
 
 _How do we have to adjust the `job.ini` file and the input files in `AccumulationTest2.zip` to do so?_
 
