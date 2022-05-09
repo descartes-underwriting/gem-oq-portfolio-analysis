@@ -10,4 +10,4 @@ The list of simulated ruptures is different in the two analyses (see respectivel
 
 We would like to run event-based PSHA analyses using the same list of ruptures for both cases (`first_run` and `second_run`).
 
-Ideally we would like to run openquake analyses with a list of ruptures externally provided as an input.s
+Ideally we would like to run openquake analyses with a list of ruptures externally provided as an input.
