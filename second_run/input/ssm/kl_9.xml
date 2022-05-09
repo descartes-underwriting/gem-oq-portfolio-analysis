@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='utf-8'?>
+<nrml xmlns:gml="http://www.opengis.net/gml"
+      xmlns="http://openquake.org/xmlns/nrml/0.5">
+
+    <sourceModel name="SA PSHA Sensitivity Source Model Containing Area Sources and Simple Fault Sources">
+
+        <sourceGroup rup_interdep="indep" src_interdep="indep" srcs_weights="1.0" 
+                tectonicRegion="Stable Continental Crust">
+
+
+        <areaSource id="9" name="KL_AZ" tectonicRegion="Stable Continental Crust">
+            <areaGeometry>
+                <gml:Polygon>
+                    <gml:exterior>
+                        <gml:LinearRing>
+                            <gml:posList>
+                             31.00000  -31.00000
+							 29.88513  -31.72427
+                             29.38326  -32.24796
+                             28.37950  -33.29536
+                             27.73782  -33.70759
+                             27.05893  -33.28656
+                             26.26358  -33.13633
+							 25.31359  -33.11424
+							 24.82313  -33.15842
+							 22.94118  -33.20844
+							 22.17341  -33.19564
+							 20.88100  -33.23403
+							 20.28397  -33.33901
+							 19.66537  -32.06958
+							 19.34546  -31.42978
+							 19.08954  -31.04589
+							 18.83362  -31.00750
+							 17.78433  -31.12267
+							 17.25071  -31.09163
+							 16.62675  -30.89267
+							 17.94915  -30.56776
+							 18.49467  -30.48048
+							 19.41114  -30.04406
+							 19.65117  -30.04406
+							 23.20796  -32.00794
+							 24.34265  -31.96429
+							 24.29900  -30.76415
+							 28.50000  -30.80000
+							 31.00000  -31.00000
+							</gml:posList>
+                        </gml:LinearRing>
+                    </gml:exterior>
+                </gml:Polygon>
+                <upperSeismoDepth>0.5</upperSeismoDepth>
+                <lowerSeismoDepth>17.0</lowerSeismoDepth>
+            </areaGeometry>
+            <magScaleRel>WC1994</magScaleRel>
+            <ruptAspectRatio>1.0</ruptAspectRatio>
+            <truncGutenbergRichterMFD aValue="3.52" bValue="0.95" minMag="5.0" maxMag="5.73" />
+            <nodalPlaneDist>
+                <nodalPlane probability="1.0" strike="89.0" dip="60.0" rake="-80.0" />
+            </nodalPlaneDist>
+            <hypoDepthDist>
+                <hypoDepth probability="0.2" depth="5.0" />
+				<hypoDepth probability="0.5" depth="10.0" />
+				<hypoDepth probability="0.3" depth="15.0" />
+            </hypoDepthDist>
+        </areaSource>
+
+        </sourceGroup>
+
+    </sourceModel>
+</nrml>

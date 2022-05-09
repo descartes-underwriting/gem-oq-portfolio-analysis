@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='utf-8'?>
+<nrml xmlns:gml="http://www.opengis.net/gml"
+      xmlns="http://openquake.org/xmlns/nrml/0.5">
+
+    <sourceModel name="SA PSHA Sensitivity Source Model Containing Area Sources and Simple Fault Sources">
+
+        <sourceGroup rup_interdep="indep" src_interdep="indep" srcs_weights="1.0" 
+                tectonicRegion="Stable Continental Crust">
+
+        <areaSource id="11" name="KOSH_AZ" tectonicRegion="Stable Continental Crust">
+            <areaGeometry>
+                <gml:Polygon>
+                    <gml:exterior>
+                        <gml:LinearRing>
+                            <gml:posList>
+                             26.963 -26.981
+							 27.027 -26.779
+                             26.992 -26.603
+                             26.595 -26.396
+                             26.321 -26.565
+							 26.182 -26.897
+							 26.152 -27.117
+							 26.713 -27.221
+							 26.963 -26.981
+							</gml:posList>
+                        </gml:LinearRing>
+                    </gml:exterior>
+                </gml:Polygon>
+                <upperSeismoDepth>0.5</upperSeismoDepth>
+                <lowerSeismoDepth>17.0</lowerSeismoDepth>
+            </areaGeometry>
+            <magScaleRel>WC1994</magScaleRel>
+            <ruptAspectRatio>1.0</ruptAspectRatio>
+            <truncGutenbergRichterMFD aValue="3.6" bValue="0.82" minMag="5.0" maxMag="5.61" />
+            <nodalPlaneDist>
+                <nodalPlane probability="0.7" strike="40" dip="60.0" rake="-76.0" />
+				<nodalPlane probability="0.3" strike="174.0" dip="85.0" rake="4.0" />
+            </nodalPlaneDist>
+            <hypoDepthDist>
+                <hypoDepth probability="0.6" depth="2.0" />
+				<hypoDepth probability="0.4" depth="5.0" />
+            </hypoDepthDist>
+        </areaSource>
+
+        </sourceGroup>
+    </sourceModel>
+</nrml>
